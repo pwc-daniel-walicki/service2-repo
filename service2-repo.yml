@@ -1,0 +1,33 @@
+spring:
+  config.activate.on-profile: dev
+  datasource:
+    username: dev-2
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8089
+management.endpoints.web.exposure.include: "*"
+
+config.value: service2 main branch dev
+
+---
+
+spring:
+  config.activate.on-profile: qa
+  datasource:
+    username: qa-2
+    url: jdbc:h2:mem:data;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+
+server.port: 8089
+management.endpoints.web.exposure.include: "*"
+
+config.value: service2 main branch qa
