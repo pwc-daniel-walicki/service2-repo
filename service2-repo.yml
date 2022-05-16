@@ -12,7 +12,7 @@ spring:
 server.port: 8089
 management.endpoints.web.exposure.include: "*"
 
-config.value: service2 main branch dev
+config.value: service2 develop branch dev
 
 ---
 
@@ -30,4 +30,4 @@ spring:
 server.port: 8089
 management.endpoints.web.exposure.include: "*"
 
-config.value: service2 main branch qa
+config.value: service2 develop branch qa
